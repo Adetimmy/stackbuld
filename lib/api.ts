@@ -10,7 +10,7 @@ const seedProductsToLocalStorage = (products: Product[]) => {
   }
 };
 
-export const getProducts = async () => {
+export const getProducts = async (): Promise<Product[] | string> => {
   try {
     // get stored dta from localstorage
     const existedProducts = localStorage.getItem(PRODUCT_KEY);
