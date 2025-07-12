@@ -1,6 +1,10 @@
 import axios, { AxiosError } from "axios";
+import { Product } from "./types";
 
-const getProducts = async () => {
+export const getProducts = async (): Promise<{
+  data: Product[] | null;
+  error: string | null;
+}> => {
   try {
     const res = await axios.get("/products.json");
     if (res.statusText === "OK") {
