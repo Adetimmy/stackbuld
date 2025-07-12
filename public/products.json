@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "slug": "wireless-headphones",
+    "name": "Premium Wireless Headphones",
+    "price": 199.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "High-quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
+    "category": "Electronics",
+    "inStock": true,
+    "features": [
+      "Noise Cancellation",
+      "30h Battery",
+      "Bluetooth 5.0",
+      "Quick Charge"
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "smart-watch",
+    "name": "Smart Fitness Watch",
+    "price": 299.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Advanced fitness tracking with heart rate monitoring, GPS, and smartphone integration.",
+    "category": "Wearables",
+    "inStock": true,
+    "features": [
+      "Heart Rate Monitor",
+      "GPS Tracking",
+      "Water Resistant",
+      "7-day Battery"
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "laptop-stand",
+    "name": "Ergonomic Laptop Stand",
+    "price": 79.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Adjustable aluminum laptop stand for better posture and improved airflow.",
+    "category": "Accessories",
+    "inStock": true,
+    "features": [
+      "Adjustable Height",
+      "Aluminum Build",
+      "Portable",
+      "Heat Dissipation"
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "coffee-maker",
+    "name": "Smart Coffee Maker",
+    "price": 149.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Programmable coffee maker with smartphone app control and built-in grinder.",
+    "category": "Kitchen",
+    "inStock": true,
+    "features": [
+      "App Control",
+      "Built-in Grinder",
+      "Programmable",
+      "12-cup Capacity"
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "desk-lamp",
+    "name": "LED Desk Lamp",
+    "price": 59.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Adjustable LED desk lamp with multiple brightness levels and color temperatures.",
+    "category": "Home",
+    "inStock": true,
+    "features": [
+      "Adjustable Brightness",
+      "Color Temperature",
+      "USB Charging",
+      "Touch Control"
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "wireless-mouse",
+    "name": "Ergonomic Wireless Mouse",
+    "price": 49.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Comfortable wireless mouse with precision tracking and long battery life.",
+    "category": "Electronics",
+    "inStock": true,
+    "features": [
+      "Ergonomic Design",
+      "Precision Tracking",
+      "Long Battery",
+      "Silent Clicks"
+    ]
+  },
+  {
+    "id": "7",
+    "slug": "phone-case",
+    "name": "Premium Phone Case",
+    "price": 29.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Durable phone case with military-grade protection and wireless charging compatibility.",
+    "category": "Accessories",
+    "inStock": true,
+    "features": [
+      "Military Grade",
+      "Wireless Charging",
+      "Drop Protection",
+      "Slim Design"
+    ]
+  },
+  {
+    "id": "8",
+    "slug": "bluetooth-speaker",
+    "name": "Portable Bluetooth Speaker",
+    "price": 89.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Waterproof Bluetooth speaker with 360-degree sound and 20-hour battery life.",
+    "category": "Electronics",
+    "inStock": true,
+    "features": ["360° Sound", "Waterproof", "20h Battery", "Voice Assistant"]
+  },
+  {
+    "id": "9",
+    "slug": "yoga-mat",
+    "name": "Premium Yoga Mat",
+    "price": 39.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Non-slip yoga mat made from eco-friendly materials with alignment guides.",
+    "category": "Fitness",
+    "inStock": true,
+    "features": [
+      "Non-slip Surface",
+      "Eco-friendly",
+      "Alignment Guides",
+      "6mm Thickness"
+    ]
+  },
+  {
+    "id": "10",
+    "slug": "water-bottle",
+    "name": "Insulated Water Bottle",
+    "price": 24.99,
+    "image": "/placeholder.svg?height=400&width=400",
+    "description": "Double-wall insulated water bottle that keeps drinks cold for 24h or hot for 12h.",
+    "category": "Lifestyle",
+    "inStock": true,
+    "features": ["Double-wall Insulated", "24h Cold", "12h Hot", "BPA Free"]
+  }
+]
