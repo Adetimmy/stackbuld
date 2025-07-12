@@ -1,10 +1,9 @@
-import Link from "next/link"
-import Image from "next/image"
-import type { Product } from "@/lib/types"
-
+import Link from "next/link";
+import Image from "next/image";
+import type { Product } from "@/lib/types";
 
 interface ProductCardProps {
-  product: Product
+  product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
@@ -15,7 +14,13 @@ export default function ProductCard({ product }: ProductCardProps) {
     >
       <div className="aspect-square overflow-hidden rounded-t-lg">
         <Image
-          src={product.image || "/placeholder.svg"}
+          src={
+            product.image ||
+            `https://placehold.co/400x400?text=${product.name.replaceAll(
+              " ",
+              "+"
+            )}`
+          }
           alt={product.name}
           width={400}
           height={400}
@@ -24,13 +29,24 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="p-4">
-        <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{product.name}</h3>
-        <p className="text-sm text-gray-600 mt-1 line-clamp-2">{product.description}</p>
+        <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+          {product.name}
+        </h3>
+        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+          {product.description}
+        </p>
         <div className="flex items-center justify-between mt-3">
-          <span className="text-lg font-bold text-gray-900">${product.price.toFixed(2)}</span>
-          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">{product.category}</span>
+          <span className="text-lg font-bold text-gray-900">
+            {product.price.toLocaleString('en-NG',{
+              currency:"NGN",
+              style:'currency'
+            })}
+          </span>
+          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+            {product.category}
+          </span>
         </div>
       </div>
     </Link>
-  )
+  );
 }

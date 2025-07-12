@@ -10,10 +10,7 @@ const seedProductsToLocalStorage = (products: Product[]) => {
   }
 };
 
-export const getProducts = async (): Promise<{
-  data: Product[] | null;
-  error: string | null;
-}> => {
+export const getProducts = async () => {
   try {
     // get stored dta from localstorage
     const existedProducts = localStorage.getItem(PRODUCT_KEY);
@@ -24,13 +21,13 @@ export const getProducts = async (): Promise<{
     const res = await axios.get("/products.json");
     if (res.statusText === "OK") {
       seedProductsToLocalStorage(res.data);
-      return { data: res.data, error: null };
+      return res.data;
     }
-    return { data: null, error: res.data };
+    throw new Error("product not found");
   } catch (error) {
     if (error instanceof AxiosError) {
-      return { error: error.message ?? error.response?.data, data: null };
+      return error.message ?? error.response?.data;
     }
-    return { error: "Something went wrong, try again later", data: null };
+    return "Something went wrong, try again later";
   }
 };
