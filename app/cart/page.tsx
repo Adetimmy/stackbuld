@@ -1,10 +1,8 @@
 "use client";
 import CartItem from "@/components/cartItem";
-import OrderSummary from "@/components/orderSummary";
+import OrderSummary from "@/components/order-summary";
 import useCartStore from "@/store/cart-store";
-import { convertToNaira } from "@/utils/useCurrency";
-import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
-import Image from "next/image";
+import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
 export default function Cart() {

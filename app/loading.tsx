@@ -1,5 +1,5 @@
 import LoadingSpinner from '@/components/loader-spinner'
 
-export default function loading() {
+export default function Loading() {
   return <LoadingSpinner/>
 }
