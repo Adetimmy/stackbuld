@@ -1,7 +1,7 @@
 "use client";
 
 import { useProduct } from "@/lib/queries";
-//import { useCartStore } from "@/lib/store"
+import useCartStore from "@/store/cart-store";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ShoppingCart, Check } from "lucide-react";
@@ -17,14 +17,13 @@ interface ProductPageProps {
 
 export default function ProductPage({ params }: ProductPageProps) {
   const { data: product, isLoading, error, refetch } = useProduct(params.slug);
-  console.log("DYNA", product);
-  // const addItem = useCartStore((state) => state.addItem)
+  const addItem = useCartStore((state) => state.addItem);
   const [quantity, setQuantity] = useState(1);
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToCart = () => {
     if (product) {
-      //   addItem(product, quantity)
+      addItem(product, quantity);
       setIsAdded(true);
       setTimeout(() => setIsAdded(false), 2000);
     }
@@ -54,7 +53,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className="container py-8">
+    <article className="container py-8">
       <Link
         href="/"
         className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 mb-6"
@@ -64,7 +63,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="aspect-square overflow-hidden rounded-lg bg-white grid place-items-center">
+        <figure className="aspect-square overflow-hidden rounded-lg bg-white grid place-items-center">
           <Image
             src={
               product.image ||
@@ -79,10 +78,10 @@ export default function ProductPage({ params }: ProductPageProps) {
             className="w-8/12 h-auto object-cover"
             priority
           />
-        </div>
+        </figure>
 
         <div className="space-y-6">
-          <div>
+          <figcaption>
             <span className="text-sm text-blue-600 font-medium">
               {product.category}
             </span>
@@ -95,7 +94,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 style: "currency",
               })}
             </p>
-          </div>
+          </figcaption>
 
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -169,6 +168,6 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
