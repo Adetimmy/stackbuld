@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import ProductCard from "@/components/product-card"
-import type { Product } from "@/lib/types"
+import type { Product } from "@/utils/types"
 
 const mockProduct: Product = {
   id: "1",

@@ -4,7 +4,7 @@ import ErrorMessage from "@/components/error-message";
 import LoadingSpinner from "@/components/loader-spinner";
 import ProductCard from "@/components/product-card";
 import { useProducts } from "@/lib/queries";
-import { Product } from "@/lib/types";
+import { Product } from "@/utils/types";
 
 export default function Home() {
   const { data: products, isLoading, error, refetch } = useProducts();

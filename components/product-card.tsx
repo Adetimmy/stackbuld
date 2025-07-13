@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Product } from "@/lib/types";
+import type { Product } from "@/utils/types";
 import { convertToNaira } from "@/utils/useCurrency";
 
 interface ProductCardProps {

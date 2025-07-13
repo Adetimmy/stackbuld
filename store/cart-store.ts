@@ -1,4 +1,4 @@
-import { CartItem, CartState, Product } from "@/lib/types";
+import { CartItem, CartState, Product } from "@/utils/types";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 

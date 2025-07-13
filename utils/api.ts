@@ -1,5 +1,5 @@
 import axios, { AxiosError } from "axios";
-import { Product } from "./types";
+import { Product } from "../utils/types";
 
 const PRODUCT_KEY = "STACKBULD_PRODUCTS";
 
