@@ -54,7 +54,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <article className="container py-8">
+    <article className="container lg:py-8">
       <Link
         href="/"
         className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 mb-6"

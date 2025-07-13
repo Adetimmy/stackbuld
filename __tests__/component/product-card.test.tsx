@@ -14,7 +14,7 @@ const mockProduct: Product = {
   features: ["Feature 1", "Feature 2"],
 }
 
-describe("ProductCard", () => {
+describe("Product Card", () => {
   it("render product card ppt correctly", () => {
     render(<ProductCard product={mockProduct} />)
 

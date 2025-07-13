@@ -4,8 +4,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry: 5, // retry refetching incase any failure
-      staleTime: 6000 * 5, // cache item fetched for 5mins
+      retry: 1, // retry refetching incase any failure
+      staleTime: 1000 * 60, // cache item fetched for 1min
     },
   },
 });

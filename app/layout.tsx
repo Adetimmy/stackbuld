@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <ReactQueryProvider>
           <Header />
-          <main className="container py-32">{children}</main>
+          <main className="container pt-8 pb-32">{children}</main>
           <Footer />
         </ReactQueryProvider>
       </body>

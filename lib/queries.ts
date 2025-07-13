@@ -6,6 +6,8 @@ export const useProducts = () => {
   return useQuery({
     queryKey: ["products"],
     queryFn: async () => await getProducts(),
+    retry: 3, //retries 3 times in case an failure,
+    staleTime: 1000 * 60 * 5 // caching fected item for 5mins
   });
 };
 
@@ -22,5 +24,7 @@ export const useProduct = (slug: string) => {
         return product;
       }
     },
+    enabled:!!slug, // only activate the call when slug is active or included as a arg
+    staleTime: 1000 * 60 * 5
   });
 };
