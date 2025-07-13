@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Product } from "@/lib/types";
+import { convertToNaira } from "@/utils/useCurrency";
 
 interface ProductCardProps {
   product: Product;
@@ -39,10 +40,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </p>
           <div className="flex items-center justify-between mt-3">
             <span className="text-lg font-bold text-gray-900">
-              {product.price.toLocaleString("en-NG", {
-                currency: "NGN",
-                style: "currency",
-              })}
+              {convertToNaira(product.price)}
             </span>
             <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
               {product.category}

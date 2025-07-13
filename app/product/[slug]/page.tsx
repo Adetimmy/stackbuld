@@ -8,6 +8,7 @@ import { ArrowLeft, ShoppingCart, Check } from "lucide-react";
 import { useState } from "react";
 import LoadingSpinner from "@/components/loader-spinner";
 import ErrorMessage from "@/components/error-message";
+import { convertToNaira } from "@/utils/useCurrency";
 
 interface ProductPageProps {
   params: {
@@ -89,10 +90,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               {product.name}
             </h1>
             <p className="text-2xl font-bold text-gray-900 mt-4">
-              {product.price.toLocaleString("en-NG", {
-                currency: "NGN",
-                style: "currency",
-              })}
+              {convertToNaira(product.price)}
             </p>
           </figcaption>
 
