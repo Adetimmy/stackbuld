@@ -7,7 +7,9 @@ export const useProducts = () => {
     queryKey: ['products'],
     queryFn: async () => {
       const res = await getProducts();
-      console.log('debug => ', res);
+      if (!Array.isArray(res)) {
+        throw new Error(res);
+      }
       return res;
     },
     retry: 3, //retries 3 times in case an failure,
