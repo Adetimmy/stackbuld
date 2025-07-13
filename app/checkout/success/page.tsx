@@ -1,5 +1,5 @@
 import SuccessCheck from "@/public/success-check";
-import { CheckCircle, Package } from "lucide-react";
+import { Package } from "lucide-react";
 import Link from "next/link";
 
 interface SeachProps {
