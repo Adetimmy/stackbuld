@@ -59,7 +59,7 @@ const useCartStore = create<CartState>()(
         const cartList = get().cart;
         let totalPrice = 0;
         
-        if (cartList.length === 0) return 0;
+        if (cartList.length === 0) return totalPrice;
 
         for (let i = 0; i < cartList.length; i++) {
           totalPrice += cartList[i].price * cartList[i].quantity;

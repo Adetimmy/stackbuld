@@ -10,7 +10,7 @@ export default function CartItem() {
   return (
     <div className="lg:col-span-2 space-y-4">
       {cart.map((item) => (
-        <div key={item.id} className="bg-white rounded-lg shadow-sm border p-6">
+        <div key={item.id} className="bg-white rounded-lg shadow-sm border p-6 relative">
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0">
               <Image
@@ -22,7 +22,7 @@ export default function CartItem() {
               />
             </div>
 
-            <div className="flex-1 min-w-0">
+            <div className="lg:flex-1 min-w-0">
               <Link
                 href={`/product/${item.slug}`}
                 className="text-lg font-semibold text-gray-900 hover:text-blue-600"
@@ -30,11 +30,11 @@ export default function CartItem() {
                 {item.name}
               </Link>
               <p className="text-gray-600 mt-1">
-                {convertToNaira(item.price)} each
+                {convertToNaira(item.price)}
               </p>
             </div>
 
-            <div className="flex items-center space-x-3">
+            <div className="max-lg:absolute bottom-4 right-2 flex items-center space-x-3">
               <button
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
                 className="p-1 rounded-full hover:shadow-md transition-shadow"

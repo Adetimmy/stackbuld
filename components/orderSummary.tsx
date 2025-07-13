@@ -9,7 +9,7 @@ export default function OrderSummary() {
     <div className="lg:col-span-1">
       <div className="bg-white rounded-lg shadow-sm border p-6 sticky top-24">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
-          Order Summary
+        Summary
         </h2>
 
         <div className="space-y-3 mb-6">
@@ -20,7 +20,7 @@ export default function OrderSummary() {
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-600">Shipping</span>
+            <span className="text-gray-600">VAT. incl.</span>
             <span className="font-medium text-green-600">Free</span>
           </div>
           <div className="border-t pt-3">
