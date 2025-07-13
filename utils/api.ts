@@ -18,9 +18,8 @@ export const getProducts = async (): Promise<Product[] | string> => {
       return JSON.parse(existedProducts);
     }
     // if not data exist yet in localstorage, fallback to fetch data and stored in localstorage
-    const url = process.env.NODE_ENV === "development"? "/products.json" : "https://stackbuld-psi.vercel.app/products.json"
-    const res = await axios.get(url);
-    if (res.statusText === "OK") {
+    const res = await axios.get("/products.json");
+    if (res.status === 200 || res.status === 304) {
       seedProductsToLocalStorage(res.data);
       return res.data;
     }
