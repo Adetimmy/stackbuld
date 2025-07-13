@@ -21,7 +21,7 @@ export default function Header() {
 
           <nav className="flex items-center space-x-6">
             <Link
-              href={totalItems > 0 ? "/cart" : "#"}
+              href="/cart"
               className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 transition-colors relative"
             >
               <ShoppingCart className="h-5 w-5" />

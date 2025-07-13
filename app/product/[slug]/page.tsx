@@ -107,9 +107,9 @@ export default function ProductPage({ params }: ProductPageProps) {
             <h3 className="text-lg font-semibold text-gray-900 mb-3">
               Features
             </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 translate-x-4">
               {product.features.map((feature, index) => (
-                <li key={index} className="text-gray-600">
+                <li key={index} className="text-gray-600 list-disc">
                   {feature}
                 </li>
               ))}

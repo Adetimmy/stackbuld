@@ -10,7 +10,7 @@ export default function CartItem() {
   return (
     <div className="lg:col-span-2 space-y-4">
       {cart.map((item) => (
-        <div key={item.id} className="bg-white rounded-lg shadow-sm border p-6 relative">
+        <div key={item.id} className="bg-white rounded-lg shadow-sm border py-6 px-2 relative">
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0">
               <Image
@@ -25,7 +25,7 @@ export default function CartItem() {
             <div className="lg:flex-1 min-w-0">
               <Link
                 href={`/product/${item.slug}`}
-                className="text-lg font-semibold text-gray-900 hover:text-blue-600"
+                className="text-sm sm:text-lg font-semibold text-gray-900 hover:text-blue-600"
               >
                 {item.name}
               </Link>

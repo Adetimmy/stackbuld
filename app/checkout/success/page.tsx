@@ -16,7 +16,7 @@ export default function Success({ searchParams }: SeachProps) {
           Order Confirmed!
         </h1>
 
-        <p className="text-lg text-gray-600 mb-6">
+        <p className="text-lg text-gray-600 mb-6 text-center">
           Thank you for your purchase. Your order has been successfully placed.
         </p>
 
@@ -28,7 +28,7 @@ export default function Success({ searchParams }: SeachProps) {
           <p className="text-xl font-mono font-bold text-gray-900">{orderId}</p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 text-center">
           <p className="text-gray-600">
             You will receive an email confirmation shortly with your order
             details.
@@ -37,7 +37,7 @@ export default function Success({ searchParams }: SeachProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               Continue Shopping
             </Link>
