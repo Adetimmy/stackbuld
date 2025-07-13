@@ -64,7 +64,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <figure className="aspect-square overflow-hidden rounded-lg bg-white grid place-items-center">
+        <figure className="aspect-square overflow-hidden rounded-lg shadow-md bg-white grid place-items-center">
           <Image
             src={
               product.image ||
@@ -128,10 +128,10 @@ export default function ProductPage({ params }: ProductPageProps) {
                 id="quantity"
                 value={quantity}
                 onChange={(e) => setQuantity(Number(e.target.value))}
-                className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
               >
                 {Array.from({ length: 10 }).map((num, i) => (
-                  <option key={i} value={i + 1}>
+                  <option key={i} value={i + 1} >
                     {i + 1}
                   </option>
                 ))}

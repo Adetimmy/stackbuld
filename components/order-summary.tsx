@@ -6,7 +6,7 @@ import React from "react";
 export default function OrderSummary() {
   const { getTotalPrice, clearCart } = useCartStore();
   return (
-    <div className="lg:col-span-1">
+    <div className="lg:col-span-1 text-gray-800">
       <div className="bg-white rounded-lg shadow-sm border p-6 sticky top-24">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">
         Summary
