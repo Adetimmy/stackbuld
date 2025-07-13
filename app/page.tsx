@@ -8,7 +8,6 @@ import { Product } from "@/lib/types";
 
 export default function Home() {
   const { data: products, isLoading, error, refetch } = useProducts();
-  console.log(products);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -25,7 +24,11 @@ export default function Home() {
   }
 
   if (!products) {
-    return <p>No products found</p>;
+    return (
+      <div className="container py-8">
+        <ErrorMessage message="Product not found." />
+      </div>
+    );
   }
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

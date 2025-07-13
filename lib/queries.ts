@@ -12,7 +12,7 @@ export const useProducts = () => {
 
 export const useProduct = (slug: string) => {
   return useQuery({
-    queryKey: ["products"],
+    queryKey: ["products", slug],
     queryFn: async () => {
       const products = await getProducts();
       if (Array.isArray(products)) {

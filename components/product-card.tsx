@@ -12,7 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       href={`/product/${product.slug}`}
       className="group bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow duration-200"
     >
-      <div className="aspect-square overflow-hidden rounded-t-lg">
+      <div className="aspect-square overflow-hidden rounded-t-lg grid place-items-center">
         <Image
           src={
             product.image ||
@@ -21,10 +21,11 @@ export default function ProductCard({ product }: ProductCardProps) {
               "+"
             )}`
           }
+          priority
           alt={product.name}
-          width={400}
-          height={400}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+          width={100}
+          height={100}
+          className="w-1/2 h-auto object-cover group-hover:scale-105 transition-transform duration-200"
         />
       </div>
 
