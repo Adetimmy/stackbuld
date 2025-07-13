@@ -15,9 +15,9 @@ export default function Checkout() {
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // generate random orderId
-    const orderId = Math.random().toString(36).substr(2, 9).toUpperCase();
+    const orderId = Math.random().toString(36).substring(2, 17).toUpperCase();
     clearCart();
-    router.push(`/checkout/success?orderId=${orderId}`);
+    router.push(`/checkout/success?orderId=STB.${orderId}`);
   };
 
   return (

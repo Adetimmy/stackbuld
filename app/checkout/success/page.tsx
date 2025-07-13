@@ -7,7 +7,7 @@ interface SeachProps {
 }
 
 export default function Success({ searchParams }: SeachProps) {
-  const orderId = searchParams.orderId;
+  const orderId = searchParams.orderId || '';
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex flex-col items-center">
