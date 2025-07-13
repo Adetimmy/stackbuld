@@ -57,9 +57,12 @@ const useCartStore = create<CartState>()(
 
       getTotalPrice: () => {
         const cartList = get().cart;
-        let totalPrice: number = 0;
-        for (let i = 0; i <= cartList.length; i++) {
-          totalPrice = cartList[i].price * cartList[i].quantity;
+        let totalPrice = 0;
+        
+        if (cartList.length === 0) return 0;
+
+        for (let i = 0; i < cartList.length; i++) {
+          totalPrice += cartList[i].price * cartList[i].quantity;
         }
         return totalPrice;
       },
@@ -84,4 +87,4 @@ const useCartStore = create<CartState>()(
   )
 );
 
-export default useCartStore
+export default useCartStore;
