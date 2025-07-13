@@ -20,7 +20,7 @@ export interface CartItem {
 }
 
 export interface CartState {
-  items: CartItem[]
+  cart: CartItem[]
   addItem: (product: Product, quantity?: number) => void
   removeItem: (id: string) => void
   updateQuantity: (id: string, quantity: number) => void
