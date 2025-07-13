@@ -117,7 +117,7 @@ The design follows a **mobile-first responsive approach** using CSS Grid and Fle
 - **Invalid Product Data**: Data validation with user feedback
 
 ### Recovery Patterns
-\`\`\`typescript
+```typescript
 // Example error recovery pattern
 const { data, error, refetch } = useProducts()
 
@@ -129,34 +129,26 @@ if (error) {
     />
   )
 }
-\`\`\`
+```
 
 ## Getting Started Running App
 
-\`\`\`bash
-# Install dependencies
+### Install dependencies
+```sh
 pnpm install
+```
 
-# Start development server
+### Start development server
+```sh
 pnpm dev
+```
 
-# Run tests
+### Run tests
+```sh
 pnpm test
-
-# Build for production
+```
+### Build for production
+```sh
 pnpm build
-\`\`\`
+```
 
-## 📁 Project Structure
-
-\`\`\`
-mini-commerce/
-├── app/                    # Next.js App Router pages
-├── components/             # Reusable UI components
-├── lib/                   # Provider and querires
-├── utils/                 # api, types, and custom function
-├── public/                # Static assets and product data
-├── store/                 # Store
-├── __tests__/             # Test file
-└── README.md              # Project documentation
-\`\`\`
