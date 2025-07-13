@@ -76,7 +76,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             alt={product.name}
             width={600}
             height={600}
-            className="w-8/12 h-full object-cover"
+            className="w-8/12 h-auto object-cover"
             priority
           />
         </div>
