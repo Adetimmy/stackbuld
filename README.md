@@ -4,7 +4,7 @@ A modern, client-side e-commerce built with Next.js 14, featuring a complete sho
 
 ## Project Overview
 
-Mini-Commerce is a fully functional e-commerc that demonstrates modern web developments practices. The application provides:
+Stackbuld E-Commerce is a fully functional e-commerc that demonstrates modern web developments practices. The application provides:
 
 - **Product Catalgue**: Brose 10 curated products with detailed information
 - **Product Details**: Individual product pages with comprehensive information
@@ -31,10 +31,6 @@ The design follows a **mobile-first responsive approach** using CSS Grid and Fle
 - **Sticky Navigation**: Header remains accessible during scrolling
 - **Hierarchical Typography**: Clear information hierarchy with proper heading structure
 
-### Color Palette & Visual Design
-- **Semantic Colors**: Green for success states, red for errors/removal actions
-- **High Contrast**: Ensures WCAG AA compliance for accessibility
-
 ## Tools & Techniques
 
 ### Core Technologies
@@ -60,14 +56,7 @@ The design follows a **mobile-first responsive approach** using CSS Grid and Fle
 - **Accessibility Testing**: Screen reader and keyboard navigation validation
 - **Type Safety**: Compile-time error prevention with TypeScript
 
-### Code Quality
-- **ESLint**: Code linting with Next.js and TypeScript rules
-- **Prettier**: Consistent code formatting
-- **Husky**: Pre-commit hooks for quality assurance
-- **Path Mapping**: Clean imports with \`@/\` alias
-
 ## SEO Strategy
-
 ### Meta Tags & Open Graph
 - **Dynamic Meta Tags**: Page-specific titles and descriptions
 - **Open Graph Protocol**: Social media sharing optimization
@@ -85,20 +74,14 @@ The design follows a **mobile-first responsive approach** using CSS Grid and Fle
 - **Static Generation**: Pre-rendered pages for faster loading
 - **Resource Hints**: Preloading critical resources
 
-### Core Web Vitals
-- **LCP Optimization**: Hero images optimized for fast loading
-- **CLS Prevention**: Proper image dimensions and skeleton loading
-- **FID Improvement**: Minimal JavaScript execution on main thread
-
 ## Error-Handling Technique
-
 ### Error Surface Strategy
 - **User-Friendly Messages**: Clear, actionable error descriptions
 - **Visual Indicators**: Consistent error states with icons and colors
 - **Contextual Help**: Specific guidance based on error type
 - **Graceful Degradation**: Fallback content when features fail
 
-### Error Recovery Mechanisms
+### Error Recovery Methods
 - **Retry Functionality**: One-click retry for failed network requests
 - **Optimistic Rollback**: Automatic state restoration on operation failure
 - **Cache Fallbacks**: Serve stale data when fresh data unavailable
