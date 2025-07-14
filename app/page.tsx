@@ -4,7 +4,9 @@ import ErrorMessage from "@/components/error-message";
 import LoadingSpinner from "@/components/loader-spinner";
 import ProductCard from "@/components/product-card";
 import { useProducts } from "@/lib/queries";
+import { PageMetaData } from "@/seo-config";
 import { Product } from "@/utils/types";
+import Script from "next/script";
 
 export default function Home() {
   const { data: products, isLoading, error, refetch } = useProducts();
@@ -36,6 +38,13 @@ export default function Home() {
         products?.map((product: Product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+        <Script
+        strategy="beforeInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(PageMetaData.ProductsJSONLD(products)),
+        }}
+      />
     </div>
   );
 }

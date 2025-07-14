@@ -1,25 +1,25 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import ReactQueryProvider from "@/lib/provider";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import './globals.css';
+import ReactQueryProvider from '@/lib/provider';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import { PageMetaData } from '@/seo-config';
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
+const meta = PageMetaData.Home;
 export const metadata: Metadata = {
-  title: "Stackbuld E-Commerce",
-  description: "This is a technical test product",
-  creator: "Adetimmy",
+  ...meta,
 };
 
 export default function RootLayout({
